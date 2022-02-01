@@ -37,7 +37,7 @@ install.packages(packageurl, repos=NULL, type="source")
 
 ## Usage example
 
-To load data with **tantalus** you should import RPostgresSQL and dbplyr packages:
+To load data with **tantalus** you should import RPostgresSQL and dbplyr packages (the login details might change; in this case check the following [link](https://github.com/ababaian/serratus/wiki/SQL-Schema)):
 
 ```R
 library("tantalus")
@@ -49,7 +49,7 @@ drv <- DBI::dbDriver("PostgreSQL")
 con <- DBI::dbConnect(drv,
                       user="public_reader", 
                       password="serratus",
-                      host="serratus-aurora-20210310.cluster-ro-ccz9y6yshbls.us-east-1.rds.amazonaws.com",
+                      host="serratus-aurora-20210406.cluster-ro-ccz9y6yshbls.us-east-1.rds.amazonaws.com",
                       port=5432, 
                       dbname="summary")
 
